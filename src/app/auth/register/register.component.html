@@ -1,0 +1,71 @@
+<div *ngIf="registerPhase; else postRegisterContainer" class="register-form">
+  <h1 class="fw-bold text-center mb-4">Register</h1>
+
+  <div>
+    <form *ngIf="registerForm" [formGroup]="registerForm" class="auth-form" autocomplete="off" list="autocompleteOff" (ngSubmit)="onSubmit()">
+      <!--Email-->
+      <div >
+        <mat-form-field class="w-100">
+          <mat-label>Email</mat-label>
+          <input autocomplete="username" matInput formControlName="email" required maxlength="50" />
+        </mat-form-field>
+      </div>
+
+      <!-- First Name-->
+      <div >
+        <mat-form-field class="w-100">
+          <mat-label>First name</mat-label>
+          <input autocomplete="off" matInput formControlName="firstName" required maxlength="50" />
+        </mat-form-field>
+      </div>
+
+      <!--Last Name-->
+      <div >
+        <mat-form-field class="w-100">
+          <mat-label>Last name</mat-label>
+          <input autocomplete="off" matInput formControlName="lastName" required maxlength="50" />
+        </mat-form-field>
+      </div>
+
+      <!--Passwords-->
+      <ng-container formGroupName="passwords">
+        <div >
+          <mat-form-field class="w-100">
+            <mat-label>Password</mat-label>
+            <input
+              autocomplete="current-password"
+              matInput
+              [type]="showPass ? 'text' : 'password'"
+              formControlName="password"
+              required
+              maxlength="20"
+            />
+            <mat-icon matSuffix class="pointer text-center" (click)="showPass = !showPass">remove_red_eye</mat-icon>
+          </mat-form-field>
+        </div>
+
+        <div >
+          <mat-form-field class="w-100">
+            <mat-label>Confirm password</mat-label>
+            <input matInput [type]="showPass1 ? 'text' : 'password'" formControlName="repeatPassword" required maxlength="20" />
+            <mat-icon matSuffix class="pointer text-center" (click)="showPass1 = !showPass1">remove_red_eye</mat-icon>
+          </mat-form-field>
+        </div>
+      </ng-container>
+
+      <button class="w-100 mt-3 taller-button" #submit mat-flat-button color="primary">Register</button>
+    </form>
+
+    <div class="d-flex justify-content-between mt-4">
+      <div>Already have an account?</div>
+      <a mat-button (click)="goTo(urls.LOGIN)">Sign in</a>
+    </div>
+  </div>
+</div>
+
+<ng-template #postRegisterContainer>
+  <div class="text-center after-register">
+    <h1>Registration successful</h1>
+    <a mat-button (click)="goTo(urls.LOGIN)">Go to login</a>
+  </div>
+</ng-template>

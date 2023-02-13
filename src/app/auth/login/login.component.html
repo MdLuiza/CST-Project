@@ -1,0 +1,28 @@
+<div class="login-form">
+  <h1 class="fw-bold text-center mb-4">Login</h1>
+
+  <form [formGroup]="loginForm" (ngSubmit)="login()" class="d-flex flex-column">
+    <div>
+      <mat-form-field class="w-100">
+        <mat-label>E-mail</mat-label>
+        <input matInput formControlName="email" required maxlength="50" />
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="w-100">
+        <mat-label>Password</mat-label>
+        <input matInput [type]="showPass ? 'text' : 'password'" formControlName="password" required maxlength="20" />
+      </mat-form-field>
+    </div>
+
+    <div class="d-flex flex-row justify-content-between">
+      <mat-checkbox formControlName="rememberMe">Remember me</mat-checkbox>
+    </div>
+    <div class="d-flex flex-row justify-content-between mt-3">
+      <button #submit mat-flat-button color="primary">Login</button>
+      <a mat-button (click)="goTo(urls.REGISTER)">Register</a>
+    </div>
+  </form>
+</div>
+

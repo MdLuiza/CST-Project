@@ -1,0 +1,74 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "test@test.com",
+      "password": "899b6ea89c20314d457761ec64186c46",
+      "firstName": "Madalina",
+      "lastName": "Zalaru"
+    },
+    {
+      "id": 2,
+      "email": "test1@test.com",
+      "password": "899b6ea89c20314d457761ec64186c46",
+      "firstName": "Valentin",
+      "lastName": "Zalaru"
+    },
+    {
+      "id": 3,
+      "email": "test2@test.com",
+      "password": "899b6ea89c20314d457761ec64186c46",
+      "firstName": "Alexandru",
+      "lastName": "Dumitru"
+    },
+    {
+      "email": "test4@test.com",
+      "password": "1c1b829fb3f680545e4f8f1407990536",
+      "firstName": "test",
+      "lastName": "test",
+      "id": 4
+    },
+    {
+      "email": "test5@test.com",
+      "password": "1c1b829fb3f680545e4f8f1407990536",
+      "firstName": "asd",
+      "lastName": "asd",
+      "id": 5
+    },
+    {
+      "email": "luizazalaru@gmail.com",
+      "password": "eaa5e6443145698be5f24facf2fdd486",
+      "firstName": "luiza",
+      "lastName": "zalaru",
+      "id": 6
+    },
+    {
+      "email": "madalinazalaru@gmail.com",
+      "password": "eaa5e6443145698be5f24facf2fdd486",
+      "firstName": "Zalaru",
+      "lastName": "Madalina",
+      "id": 7
+    },
+    {
+      "email": "email1@email1.com",
+      "password": "68338dfcb8afa68b07b800974c3200ea",
+      "firstName": "first",
+      "lastName": "last",
+      "id": 8
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "userId": 1,
+      "content": "This is a post of Madalina Zalaru",
+      "isFinished": false
+    },
+    {
+      "id": 2,
+      "userId": 3,
+      "content": "This is a post of Valentin Zalaru",
+      "isFinished": false
+    }
+  ]
+}
